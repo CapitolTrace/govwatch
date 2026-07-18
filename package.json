@@ -1,0 +1,59 @@
+{
+  "name": "@capitoltrace/govwatch",
+  "version": "0.1.0",
+  "description": "Health checks for government APIs — Congress.gov, FEC, CISA KEV, NVD, GDELT, and more. CLI + TypeScript library.",
+  "keywords": [
+    "government",
+    "api",
+    "health-check",
+    "monitoring",
+    "civic-tech",
+    "congress",
+    "fec",
+    "cisa",
+    "uptime"
+  ],
+  "license": "MIT",
+  "author": "Capitol Trace (https://capitoltrace.com)",
+  "homepage": "https://github.com/CapitolTrace/govwatch#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CapitolTrace/govwatch.git"
+  },
+  "bugs": "https://github.com/CapitolTrace/govwatch/issues",
+  "type": "module",
+  "engines": {
+    "node": ">=18.17"
+  },
+  "bin": {
+    "govwatch": "dist/cli.js"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm run build && npm test"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.0",
+    "typescript": "^5.5.0",
+    "vitest": "^2.1.0"
+  }
+}
