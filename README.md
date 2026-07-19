@@ -138,6 +138,18 @@ npm install @capitoltrace/govwatch
 
 Requires Node.js 18.17+. Zero runtime dependencies.
 
+### GitHub Action
+
+Add govwatch to any workflow with [govwatch-action](https://github.com/CapitolTrace/govwatch-action):
+
+```yaml
+- uses: CapitolTrace/govwatch-action@v1
+  with:
+    services: congress fec cisa-kev   # empty = all services
+```
+
+It prints per-service results, writes a table to the job summary, exposes `results` (JSON) and `outcome` outputs, and fails the step when an API is unhealthy.
+
 ### Use cases
 
 - **CI pipelines** — Fail fast if a government API your app depends on is down
