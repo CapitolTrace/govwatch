@@ -8,6 +8,8 @@ on:
 
 jobs:
   publish:
+    # Only full semver tags (v0.2.0) publish; skip marker tags like v1.
+    if: contains(github.event.release.tag_name, '.')
     runs-on: ubuntu-latest
     permissions:
       contents: read
