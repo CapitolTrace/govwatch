@@ -159,13 +159,24 @@ It prints per-service results, writes a table to the job summary, exposes `resul
 - **Incident response** — Quickly determine if an outage is your code or an upstream dependency
 - **Civic tech community** — Shared visibility into the reliability of public data sources
 
+### Ecosystem
+
+govwatch powers a family of tools — each one is this package, reused:
+
+| | |
+|:--|:--|
+| 📊 [status.capitoltrace.com](https://status.capitoltrace.com/) | Live status page with 30-day uptime history, rechecked every 30 minutes ([source](https://github.com/CapitolTrace/govwatch-status)). JSON endpoints: [`status.json`](https://status.capitoltrace.com/status.json), [`history-30d.json`](https://status.capitoltrace.com/history-30d.json) |
+| ⚙️ [govwatch-action](https://github.com/CapitolTrace/govwatch-action) | GitHub Action — two lines of YAML to gate CI on upstream health |
+| 🤖 [@capitoltrace/mcp-server](https://www.npmjs.com/package/@capitoltrace/mcp-server) | The `check_api_health` tool lets AI assistants answer "is Congress.gov up right now?" |
+| 🏛️ [capitoltrace.com/source-health](https://capitoltrace.com/source-health) | Capitol Trace's own transparency page, built on these checks |
+
 ### Contributing
 
 This is an open-source project by [Capitol Trace](https://github.com/CapitolTrace). We'd love help with:
 - Adding new government API endpoints (see `src/registry.ts` — a service is ~20 lines)
 - Regional/international government API support
 - Webhook/Slack/Discord alert integrations
-- Dashboard UI (maybe a simple web view?)
+- New assertion types (JSON schema validation, richer freshness checks)
 
 ```bash
 git clone https://github.com/CapitolTrace/govwatch
