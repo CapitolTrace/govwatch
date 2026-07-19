@@ -6,6 +6,7 @@
 </p>
 
 <p align="center">
+  <a href="https://www.npmjs.com/package/@capitoltrace/govwatch"><img src="https://img.shields.io/npm/v/%40capitoltrace%2Fgovwatch?style=flat-square&logo=npm&color=CB3837" alt="npm" /></a>
   <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript" />
   <img src="https://img.shields.io/badge/CLI_+_Library-black?style=flat-square" alt="CLI + Library" />
   <img src="https://img.shields.io/badge/17_APIs_Monitored-brightgreen?style=flat-square" alt="17 APIs" />
@@ -15,7 +16,7 @@
 
 ---
 
-> **Status: v0.1** — first working release. CLI + library, 17 services, zero runtime dependencies. Until the npm release lands you can run it straight from GitHub: `npx github:CapitolTrace/govwatch check`
+> **Status: v0.1.0 on npm** — try it right now: `npx @capitoltrace/govwatch check`
 
 ---
 
