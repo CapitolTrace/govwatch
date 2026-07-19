@@ -17,6 +17,8 @@
 ---
 
 > **Status: v0.1.0 on npm** — try it right now: `npx @capitoltrace/govwatch check`
+>
+> **📊 [Live status page](https://capitoltrace.github.io/govwatch-status/)** — these checks running every 30 minutes, with 30-day uptime history.
 
 ---
 
@@ -153,7 +155,7 @@ It prints per-service results, writes a table to the job summary, exposes `resul
 ### Use cases
 
 - **CI pipelines** — Fail fast if a government API your app depends on is down
-- **Monitoring dashboards** — Integrate with Grafana, Datadog, or Checkly via `--json`
+- **Monitoring dashboards** — Integrate with Grafana, Datadog, or Checkly via `--json`, or see the [hosted status page](https://capitoltrace.github.io/govwatch-status/)
 - **Incident response** — Quickly determine if an outage is your code or an upstream dependency
 - **Civic tech community** — Shared visibility into the reliability of public data sources
 
