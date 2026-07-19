@@ -1,0 +1,15 @@
+name: Upstream health
+
+# Dogfoods govwatch-action against all built-in services. Scheduled weekly
+# so a genuinely broken service definition surfaces without inbox noise;
+# run it manually any time an upstream outage is suspected.
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 13 * * 1'
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: CapitolTrace/govwatch-action@v1
